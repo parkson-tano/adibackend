@@ -11,3 +11,7 @@ class PaymentSerializer(serializers.ModelSerializer):
         model = Payment
         fields = '__all__'
 
+class NewsLetterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Newsletter
+        fields = '__all__'

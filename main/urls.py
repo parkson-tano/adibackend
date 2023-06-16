@@ -7,6 +7,7 @@ router.register('shipping-order', ShippingOrderViewSet)
 router.register('payment', PaymentViewSet)
 router.register('shipping-order-fetch', ShippingOrderFetchViewSet , basename='shipping-order-fetch' )
 router.register('payment-fetch', PaymentFetchViewSet, basename='payment-fetch')
+router.register('newsletter', NewsLetterViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

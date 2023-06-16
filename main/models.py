@@ -42,4 +42,7 @@ class Payment(models.Model):
     date_updated = models.DateTimeField(auto_now=True)
 
 
-
+class Newsletter(models.Model):
+    email = models.CharField(max_length=256, null=True, blank=True)
+    subscribe = models.BooleanField(default=True)
+    date_created = models.DateTimeField(auto_now_add=True)

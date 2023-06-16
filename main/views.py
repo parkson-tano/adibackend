@@ -10,6 +10,10 @@ class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
 
+class NewsLetterViewSet(viewsets.ModelViewSet):
+    queryset = Newsletter.objects.all()
+    serializer_class = NewsLetterSerializer
+
 # Compare this snippet from main\urls.py:
 
 class ShippingOrderFetchViewSet(viewsets.ModelViewSet):

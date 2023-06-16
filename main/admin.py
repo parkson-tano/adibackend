@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(ShippingOrder)
 admin.site.register(Payment)
+admin.site.register(Newsletter)
