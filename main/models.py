@@ -4,7 +4,7 @@ from django.conf import settings
 User = settings.AUTH_USER_MODEL
 
 class ShippingOrder(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shipping_orders')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shipping_orders',  null=True, blank=True)
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)
     phone_number = models.CharField(max_length=50, null=True, blank=True)
