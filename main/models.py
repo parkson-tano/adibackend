@@ -26,6 +26,7 @@ class ShippingOrder(models.Model):
     order_date = models.DateField(null=True, blank=True)
     expected_delivery_date = models.DateField(null=True, blank=True)
     expected_delivery_date_cmr = models.DateField(null=True, blank=True)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 

@@ -163,3 +163,5 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 AUTH_USER_MODEL = 'authentication.User'
+
+CSRF_TRUSTED_ORIGINS = ['https://adibackend-production.up.railway.app','https://*.127.0.0.1']
