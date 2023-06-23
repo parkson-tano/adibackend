@@ -32,7 +32,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'password', 'email', 'phone_number',
-                  'first_name', 'last_name', 'date_created', 'admin',)
+                  'first_name', 'last_name', 'date_created', 
+                   'country', 'town', 'quater', 'address', 'admin')
+                    
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -49,7 +51,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('password', 'email', 'first_name',
-                  'last_name', 'phone_number', 'admin')
+                  'last_name', 'phone_number', 'country', 'town', 'quater', 'address', 'admin')
         extra_kwargs = {
             'last_name': {'required': False}
         }
@@ -61,6 +63,10 @@ class RegisterSerializer(serializers.ModelSerializer):
             first_name=validated_data['first_name'],
             last_name=validated_data['last_name'],
             phone_number=validated_data['phone_number'],
+            country=validated_data['country'],
+            town=validated_data['town'],
+            quater=validated_data['quater'],
+            address=validated_data['address'],
             admin = validated_data['admin'],
         )
 

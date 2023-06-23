@@ -12,6 +12,10 @@ class User(AbstractUser):
 	phone_number = models.CharField(max_length=15, null=True, blank=True)
 	first_name = models.CharField(max_length=50, blank=True, null=True, unique=False, default="")
 	last_name = models.CharField(max_length=50, blank=True, null=True, unique=False, default="")
+	country = models.CharField(max_length=50, blank=True, null=True, unique=False, default="")
+	town = models.CharField(max_length=50, blank=True, null=True, unique=False, default="")	
+	quater = models.CharField(max_length=50, blank=True, null=True, unique=False, default="")
+	address = models.CharField(max_length=512, blank=True, null=True, unique=False, default="")
 	admin = models.BooleanField(default=False)
 	date_created = models.DateTimeField(auto_now_add=True)
 	USERNAME_FIELD = 'email'
